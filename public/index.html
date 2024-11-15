@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento para Manicure</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-container">
+        <div class="form-container">
+          <h1>Agende seu horário</h1>
+          <form id="appointmentForm">
+            <input
+              type="text"
+              id="clientName"
+              placeholder="Nome da Cliente"
+              required
+            />
+            <input type="date" id="appointmentDate" required />
+            <select id="appointmentTime" required>
+              <option value="">Selecione o Horário</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+            </select>
+            <div class="services">
+              <label>
+                <input type="checkbox" name="services" value="Pé" /> Pé
+              </label>
+              <label>
+                <input type="checkbox" name="services" value="Mão" /> Mão
+              </label>
+              <label>
+                <input type="checkbox" name="services" value="Pé e Mão" /> Pé e
+                Mão
+              </label>
+              <label>
+                <input type="checkbox" name="services" value="Spa dos Pés" />
+                Spa dos Pés
+              </label>
+              <label>
+                <input type="checkbox" name="services" value="Sobrancelha" />
+                Sobrancelha
+              </label>
+            </div>
+            <button type="submit">Agendar</button>
+          </form>
+        </div>
+        <div id="calendar-container">
+          <div id="calendar"></div>
+        </div>
+      </div>
+
+      <!-- Seção Instagram -->
+      <div class="instagram-section">
+        <h1>Siga-me no Instagram @daylanearaujo.unhas</h1>
+        <a
+          href="https://www.instagram.com/daylanearaujo.unhas"
+          target="_blank"
+          class="instagram-link"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <!-- Seção de Agendamentos -->
+      <div id="appointments" class="appointments-section">
+        <!-- Os agendamentos serão carregados aqui dinamicamente -->
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
